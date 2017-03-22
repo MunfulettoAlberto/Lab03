@@ -60,10 +60,10 @@
                <children>
                   <Label fx:id="txtContatore">
                      <HBox.margin>
-                        <Insets top="10.0" />
+                        <Insets top="13.0" />
                      </HBox.margin>
                   </Label>
-                  <Button fx:id="btnClear" mnemonicParsing="false" onAction="#doClearText" text="Clear Text">
+                  <Button fx:id="btnClear" disable="true" mnemonicParsing="false" onAction="#doClearText" text="Clear Text">
                      <HBox.margin>
                         <Insets right="10.0" top="10.0" />
                      </HBox.margin>
