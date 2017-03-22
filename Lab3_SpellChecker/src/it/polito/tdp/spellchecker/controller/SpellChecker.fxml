@@ -58,7 +58,7 @@
             <TextArea fx:id="txtWrongWords" editable="false" />
             <HBox alignment="TOP_RIGHT" spacing="20.0">
                <children>
-                  <Label fx:id="txtContatore">
+                  <Label fx:id="txtContatore" textFill="RED">
                      <HBox.margin>
                         <Insets top="13.0" />
                      </HBox.margin>

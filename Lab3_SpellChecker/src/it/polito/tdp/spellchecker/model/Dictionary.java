@@ -32,12 +32,31 @@ public class Dictionary {
 		RichWord richword = null;
 			for(String temp : inputTextList){
 				boolean presente = false;
-				for(String s : dictionary){
-					if(temp.compareTo(s)==0){
-						presente = true;
-						richword = new RichWord(temp, presente);
+				
+				if(dictionary.get(((int)dictionary.size()/2)+1).compareTo(temp)==0){
+					presente = true;
+					richword = new RichWord(temp, presente);
+					break;
+				}
+				if(dictionary.get(((int)dictionary.size()/2)+1).compareTo(temp)>0){
+					for(int i=0; i<dictionary.size()/2; i++){
+						if(temp.compareTo(dictionary.get(i))==0){
+							presente = true;
+							richword = new RichWord(temp, presente);
+							break;
+						}
 					}
 				}
+				if(dictionary.get(((int)dictionary.size()/2)+1).compareTo(temp)<0){
+					for(int i=dictionary.size()/2; i<dictionary.size(); i++){
+						if(temp.compareTo(dictionary.get(i))==0){
+							presente = true;
+							richword = new RichWord(temp, presente);
+							break;
+						}
+					}
+				}
+				
 				if(!presente){
 					richword = new RichWord(temp, presente);
 				}
